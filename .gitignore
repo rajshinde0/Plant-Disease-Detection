@@ -1,0 +1,42 @@
+# Academic documents - deliberately NOT published to GitHub.
+# (Broad extension patterns rather than literal filenames: gitignore treats
+# [1] as a character class, so "ASEP_Endsem1_march[1][1].pptx" would not match
+# itself without escaping.)
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+
+# Unrelated project: malicious-URL classifier, not plant disease detection
+random_forest.py
+Random_Forest.ipynb
+
+# Dataset (1.43 GB extracted) - regenerate with scripts/prepare_dataset.py
+data/raw/
+
+# Trained weights. The 98.36% checkpoint IS committed deliberately (26 MB,
+# well under GitHub's 100 MB limit) so the GPU laptop has a working model
+# before it finishes retraining. Other .pth files stay out.
+models/*.pth
+!models/plant_disease_resnet9.pth
+!models/class_names.json
+!models/history.json
+
+# Uploads
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+# Generated reports
+reports/figures/*.png
+reports/metrics.json
+
+# Run logs (training, evaluation, web app, paper artifacts)
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/

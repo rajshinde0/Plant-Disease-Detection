@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Setup needed &middot; Plant Disease Detection{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>No trained model yet</h1>
+  <p class="lede">The app is running, but there is no model file to predict with.
+     Train one and reload this page.</p>
+
+  <h2>Train a model</h2>
+  <p>On a CPU-only laptop, start with the quick recipe:</p>
+  <pre><code>python -m src.train --img-size 64 --subset 0.3 --epochs 4</code></pre>
+  <p>On a machine with an NVIDIA GPU, train at the paper's resolution:</p>
+  <pre><code>python -m src.train --img-size 256 --epochs 5 --batch-size 64 --amp</code></pre>
+
+  <h2>First time here?</h2>
+  <p>Extract the dataset, then check your environment:</p>
+  <pre><code>python scripts/prepare_dataset.py
+python scripts/check_env.py</code></pre>
+
+  <details>
+    <summary>Technical detail</summary>
+    <pre><code>{{ message }}</code></pre>
+  </details>
+</section>
+{% endblock %}

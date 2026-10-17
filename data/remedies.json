@@ -1,0 +1,387 @@
+{
+  "_meta": {
+    "description": "Offline remedy dataset for the 38 PlantVillage classes. Keys are the dataset's literal class-folder names, including its quirks (the 'Haunglongbing' misspelling, embedded spaces, trailing underscores and commas), so a lookup can never silently miss. No network access is required at inference time - farmers in areas with poor connectivity get remedies regardless.",
+    "source": "Compiled from standard extension-service guidance for each pathogen.",
+    "disclaimer": "General guidance only. Follow local label rates and pre-harvest intervals, and consult your agricultural extension officer before applying any chemical treatment."
+  },
+  "Apple___Apple_scab": {
+    "crop": "Apple",
+    "disease": "Apple Scab",
+    "healthy": false,
+    "pathogen": "Venturia inaequalis (fungus)",
+    "symptoms": "Olive-green to brown velvety blotches on leaves that later turn dark and corky; infected leaves yellow and drop early. Fruit develops scabby, cracked lesions.",
+    "organic": "Apply wettable sulphur or lime-sulphur at 7-10 day intervals from bud break through wet weather. Neem oil suppresses early infection.",
+    "chemical": "Captan or mancozeb sprays on a protectant schedule; myclobutanil or difenoconazole where resistance is not an issue. Begin at green tip.",
+    "prevention": "Rake and destroy fallen leaves to remove overwintering inoculum, prune for airflow, avoid overhead irrigation, and plant scab-resistant cultivars."
+  },
+  "Apple___Black_rot": {
+    "crop": "Apple",
+    "disease": "Black Rot",
+    "healthy": false,
+    "pathogen": "Botryosphaeria obtusa (fungus)",
+    "symptoms": "Purple-edged circular leaf spots with tan centres ('frogeye' leaf spot); fruit rots from the calyx with concentric dark rings; cankers form on limbs.",
+    "organic": "Prune out cankers and mummified fruit in dry weather and burn them. Copper sprays at dormancy reduce inoculum.",
+    "chemical": "Captan or thiophanate-methyl from petal fall at 10-14 day intervals through the season.",
+    "prevention": "Remove dead wood and mummified fruit, maintain tree vigour with balanced fertiliser, and protect trees from winter injury and drought stress."
+  },
+  "Apple___Cedar_apple_rust": {
+    "crop": "Apple",
+    "disease": "Cedar Apple Rust",
+    "healthy": false,
+    "pathogen": "Gymnosporangium juniperi-virginianae (fungus)",
+    "symptoms": "Bright yellow-orange spots on upper leaf surfaces that develop orange spore tubes beneath; severe infection causes early leaf drop and deformed fruit.",
+    "organic": "Sulphur or copper sprays from pink bud through early cover. Remove nearby juniper and cedar galls within a few hundred metres if possible.",
+    "chemical": "Myclobutanil or mancozeb applied from pink bud at 7-10 day intervals during spore release.",
+    "prevention": "Break the alternate host cycle by removing cedar and juniper hosts nearby, and plant rust-resistant apple varieties."
+  },
+  "Apple___healthy": {
+    "crop": "Apple",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Foliage is uniformly green with intact margins.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Continue routine care: balanced fertilisation, annual dormant pruning for airflow, sanitation of fallen leaves, and regular scouting during wet weather."
+  },
+  "Blueberry___healthy": {
+    "crop": "Blueberry",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves show normal colour and form.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Maintain soil pH between 4.5 and 5.5, mulch to conserve moisture, prune out old canes yearly, and scout for mummy berry in spring."
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "crop": "Cherry",
+    "disease": "Powdery Mildew",
+    "healthy": false,
+    "pathogen": "Podosphaera clandestina (fungus)",
+    "symptoms": "White powdery fungal growth on young leaves and shoots; leaves curl, blister and distort. Fruit may develop light, russeted patches.",
+    "organic": "Sulphur dust or wettable sulphur, or potassium bicarbonate sprays. Horticultural or neem oil helps on light infections. Avoid sulphur above 30 C.",
+    "chemical": "Myclobutanil, trifloxystrobin or tebuconazole; rotate chemistry groups to prevent resistance.",
+    "prevention": "Prune to open the canopy, avoid heavy nitrogen that pushes susceptible new growth, and remove infected shoots during dormant pruning."
+  },
+  "Cherry_(including_sour)___healthy": {
+    "crop": "Cherry",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Foliage is normal in colour and texture.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Prune annually for airflow, avoid excess nitrogen, keep the orchard floor clean, and monitor young shoots for mildew in humid weather."
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "crop": "Corn (Maize)",
+    "disease": "Cercospora / Gray Leaf Spot",
+    "healthy": false,
+    "pathogen": "Cercospora zeae-maydis (fungus)",
+    "symptoms": "Narrow, rectangular grey-to-tan lesions running parallel to the leaf veins, with blunt ends. Lesions merge and blight the leaf, cutting grain fill.",
+    "organic": "Rotate away from maize for at least one season and bury residue by tillage. Choose resistant hybrids - the most effective organic lever.",
+    "chemical": "Strobilurin or triazole fungicide (e.g. pyraclostrobin, propiconazole) at tasselling if lesions reach the ear leaf.",
+    "prevention": "Rotate crops, manage residue, avoid dense planting in humid valleys, and select hybrids rated resistant to gray leaf spot."
+  },
+  "Corn_(maize)___Common_rust_": {
+    "crop": "Corn (Maize)",
+    "disease": "Common Rust",
+    "healthy": false,
+    "pathogen": "Puccinia sorghi (fungus)",
+    "symptoms": "Small cinnamon-brown powdery pustules scattered on both leaf surfaces, later turning brownish-black. Heavy infection yellows and kills leaf tissue.",
+    "organic": "Plant resistant hybrids and sow early to escape peak spore pressure. Remove volunteer maize that carries inoculum.",
+    "chemical": "Mancozeb, or a strobilurin/triazole such as azoxystrobin or propiconazole, if pustules appear before silking.",
+    "prevention": "Use resistant hybrids, avoid late planting, ensure balanced potassium nutrition, and scout from the whorl stage onward."
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "crop": "Corn (Maize)",
+    "disease": "Northern Leaf Blight",
+    "healthy": false,
+    "pathogen": "Exserohilum turcicum (fungus)",
+    "symptoms": "Long, elliptical grey-green to tan 'cigar-shaped' lesions, 2-15 cm, starting on lower leaves and moving upward. Severe blighting before grain fill cuts yield sharply.",
+    "organic": "Rotate to a non-host crop, plough down infected residue, and grow resistant hybrids.",
+    "chemical": "Propiconazole, azoxystrobin or pyraclostrobin applied from pre-tassel to early silk when lesions reach mid-canopy.",
+    "prevention": "Crop rotation, residue incorporation, resistant hybrids, and avoiding continuous maize in humid regions."
+  },
+  "Corn_(maize)___healthy": {
+    "crop": "Corn (Maize)",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves are uniformly green without lesions.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Keep up crop rotation, balanced fertilisation and residue management, and scout the ear leaf during tasselling."
+  },
+  "Grape___Black_rot": {
+    "crop": "Grape",
+    "disease": "Black Rot",
+    "healthy": false,
+    "pathogen": "Guignardia bidwellii (fungus)",
+    "symptoms": "Tan circular leaf lesions ringed in dark brown with tiny black fruiting bodies; berries brown, shrivel and harden into black mummies.",
+    "organic": "Remove and destroy all mummified berries and infected canes during dormant pruning. Copper or sulphur sprays before bloom.",
+    "chemical": "Mancozeb or myclobutanil from early shoot growth through fruit set at 10-14 day intervals.",
+    "prevention": "Strict sanitation of mummies and prunings, open canopy training for airflow, and timely pre-bloom protectant sprays."
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "crop": "Grape",
+    "disease": "Esca (Black Measles)",
+    "healthy": false,
+    "pathogen": "Phaeomoniella chlamydospora and Phaeoacremonium spp. (wood-rotting fungi)",
+    "symptoms": "Interveinal 'tiger-stripe' chlorosis and necrosis on leaves; dark spotting on berries; cross-sections of trunks show dark wood streaking. Vines may collapse suddenly.",
+    "organic": "No cure once wood is colonised. Cut out infected wood well below symptoms, seal large cuts, and remove and burn dead vines.",
+    "chemical": "No effective curative spray. Protect fresh pruning wounds with a registered wound sealant or thiophanate-methyl paste.",
+    "prevention": "Prune in dry weather late in dormancy, seal large wounds promptly, sanitise tools between vines, and avoid water stress."
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "crop": "Grape",
+    "disease": "Leaf Blight (Isariopsis Leaf Spot)",
+    "healthy": false,
+    "pathogen": "Pseudocercospora vitis (fungus)",
+    "symptoms": "Irregular dark brown to blackish angular leaf spots, often with a yellow halo, that coalesce; heavy infection causes premature defoliation late in the season.",
+    "organic": "Collect and destroy fallen leaves, improve canopy ventilation, and apply copper-based fungicide (e.g. Bordeaux mixture).",
+    "chemical": "Mancozeb or copper oxychloride sprays at 10-15 day intervals during the humid post-monsoon period.",
+    "prevention": "Canopy management for airflow, leaf-litter sanitation, and avoiding overhead irrigation late in the day."
+  },
+  "Grape___healthy": {
+    "crop": "Grape",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves are evenly green with normal lobing.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Maintain an open canopy, sanitise prunings and mummies, and begin protectant sprays before bloom in wet seasons."
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "crop": "Orange / Citrus",
+    "disease": "Huanglongbing (Citrus Greening)",
+    "healthy": false,
+    "pathogen": "Candidatus Liberibacter asiaticus, spread by the Asian citrus psyllid",
+    "symptoms": "Blotchy, asymmetric leaf mottle that crosses the midrib, yellow shoots, corky swollen veins, and small lopsided fruit with bitter juice and aborted dark seeds. Trees decline over several years.",
+    "organic": "No cure exists. Remove and destroy infected trees to cut inoculum, release Tamarixia radiata as a psyllid biocontrol, and apply horticultural oil or kaolin clay to deter psyllids.",
+    "chemical": "Manage the psyllid vector rather than the bacterium: imidacloprid soil drench on young trees, foliar sprays during flush. Antibiotic trunk injections are used in some regions only under official programmes.",
+    "prevention": "Plant only certified disease-free nursery stock, scout flush growth for psyllids year-round, coordinate area-wide vector control with neighbours, and remove infected trees promptly."
+  },
+  "Peach___Bacterial_spot": {
+    "crop": "Peach",
+    "disease": "Bacterial Spot",
+    "healthy": false,
+    "pathogen": "Xanthomonas arboricola pv. pruni (bacterium)",
+    "symptoms": "Small angular purple-black leaf spots that drop out leaving a shot-hole appearance; heavy infection causes defoliation. Fruit shows dark pits and cracks.",
+    "organic": "Copper sprays at low rates (phytotoxic on peach at high rates) during dormancy and early leaf-out. Plant tolerant cultivars.",
+    "chemical": "Oxytetracycline during the growing season; dormant copper to reduce overwintering populations.",
+    "prevention": "Choose tolerant varieties, plant windbreaks to reduce leaf wounding from blowing sand, avoid overhead irrigation, and keep trees vigorous but not over-fertilised."
+  },
+  "Peach___healthy": {
+    "crop": "Peach",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves are a healthy green with smooth margins.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Keep up dormant sanitation and pruning, maintain windbreaks, and apply a dormant copper spray in regions with bacterial spot pressure."
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "crop": "Bell Pepper",
+    "disease": "Bacterial Spot",
+    "healthy": false,
+    "pathogen": "Xanthomonas campestris pv. vesicatoria (bacterium)",
+    "symptoms": "Small water-soaked leaf spots turning brown with yellow haloes, often with a greasy appearance; leaves yellow and drop. Fruit develops raised scabby lesions.",
+    "organic": "Copper hydroxide plus mancozeb tank mix, applied preventively. Use certified clean seed or treat seed in 50 C water for 25 minutes.",
+    "chemical": "Copper-based bactericides rotated with mancozeb; add streptomycin only in transplant production where permitted.",
+    "prevention": "Use disease-free seed and transplants, rotate out of solanaceous crops for 2-3 years, avoid working plants when wet, and never use overhead irrigation late in the day."
+  },
+  "Pepper,_bell___healthy": {
+    "crop": "Bell Pepper",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Foliage is uniformly green and undamaged.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Rotate crops, use clean seed, drip-irrigate rather than sprinkle, and scout weekly during warm humid spells."
+  },
+  "Potato___Early_blight": {
+    "crop": "Potato",
+    "disease": "Early Blight",
+    "healthy": false,
+    "pathogen": "Alternaria solani (fungus)",
+    "symptoms": "Dark brown lesions with concentric rings giving a 'target-board' look, usually starting on older lower leaves, each ringed by a yellow halo. Severe infection defoliates the plant.",
+    "organic": "Neem oil spray, or a copper fungicide, at the first sign of lesions and repeated every 7-10 days. Mulch to stop soil splash onto lower leaves.",
+    "chemical": "Chlorothalonil or mancozeb on a protectant schedule; azoxystrobin or difenoconazole where pressure is high.",
+    "prevention": "Rotate crops for at least two years, remove volunteer plants and crop debris, keep nitrogen and potassium adequate, and avoid overhead irrigation that keeps leaves wet."
+  },
+  "Potato___Late_blight": {
+    "crop": "Potato",
+    "disease": "Late Blight",
+    "healthy": false,
+    "pathogen": "Phytophthora infestans (oomycete)",
+    "symptoms": "Pale green water-soaked patches turning brown-black and greasy, spreading fast, with white downy fungal growth on the leaf underside in humid conditions. Tubers develop reddish-brown granular rot. This disease can destroy a crop within days.",
+    "organic": "Act immediately: remove and destroy infected foliage, then apply copper fungicide every 5-7 days in cool wet weather. Organic options are only protective, never curative.",
+    "chemical": "Mancozeb or chlorothalonil preventively; metalaxyl, cymoxanil or dimethomorph once infection is present. Rotate modes of action.",
+    "prevention": "Plant certified seed tubers, destroy cull piles and volunteers, space for airflow, hill soil over tubers, and monitor blight forecasts - treat before symptoms in cool, wet, humid spells."
+  },
+  "Potato___healthy": {
+    "crop": "Potato",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Foliage is vigorous and evenly green.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Use certified seed, rotate crops, hill soil over developing tubers, and stay alert to late-blight weather warnings."
+  },
+  "Raspberry___healthy": {
+    "crop": "Raspberry",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves are normal in colour and shape.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Remove spent floricanes after harvest, thin canes for airflow, and keep the planting weed-free to reduce humidity at the crown."
+  },
+  "Soybean___healthy": {
+    "crop": "Soybean",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Trifoliate leaves are uniformly green.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Rotate with non-legume crops, use treated certified seed, and scout for rust and frogeye leaf spot during pod fill."
+  },
+  "Squash___Powdery_mildew": {
+    "crop": "Squash",
+    "disease": "Powdery Mildew",
+    "healthy": false,
+    "pathogen": "Podosphaera xanthii (fungus)",
+    "symptoms": "White talc-like powdery patches on leaves and stems, starting on shaded lower leaves and spreading until leaves yellow, brown and die, exposing fruit to sunscald.",
+    "organic": "Potassium bicarbonate, sulphur, or a 1:9 milk-water spray weekly. Neem oil works on early infections. Remove the worst leaves.",
+    "chemical": "Myclobutanil, trifloxystrobin or chlorothalonil; alternate chemistry groups because this fungus develops resistance quickly.",
+    "prevention": "Plant resistant varieties, space plants widely, water at the base rather than overhead, and scout the undersides of lower leaves from mid-season."
+  },
+  "Strawberry___Leaf_scorch": {
+    "crop": "Strawberry",
+    "disease": "Leaf Scorch",
+    "healthy": false,
+    "pathogen": "Diplocarpon earlianum (fungus)",
+    "symptoms": "Numerous small dark purple spots that enlarge and merge until the leaf looks scorched and the margins curl upward; petioles and runners may also be spotted.",
+    "organic": "Remove and destroy infected leaves after harvest renovation. Copper or sulphur sprays in early spring.",
+    "chemical": "Captan or myclobutanil applied from early leaf growth through bloom at 10-14 day intervals.",
+    "prevention": "Renovate beds after harvest by mowing old foliage, space plants for airflow, use drip irrigation, and plant resistant cultivars."
+  },
+  "Strawberry___healthy": {
+    "crop": "Strawberry",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaflets are evenly green with normal serration.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Renovate beds annually, keep foliage dry with drip irrigation, and remove old leaves to limit overwintering inoculum."
+  },
+  "Tomato___Bacterial_spot": {
+    "crop": "Tomato",
+    "disease": "Bacterial Spot",
+    "healthy": false,
+    "pathogen": "Xanthomonas spp. (bacterium)",
+    "symptoms": "Small dark water-soaked leaf spots with yellow haloes that dry and tear; spots on fruit are raised, scabby and slightly sunken at the centre.",
+    "organic": "Copper hydroxide plus mancozeb preventively. Hot-water seed treatment at 50 C for 25 minutes kills seedborne bacteria.",
+    "chemical": "Copper bactericides rotated with mancozeb. Antibiotics are rarely effective in the field.",
+    "prevention": "Use certified clean seed, rotate out of solanaceous crops for 2-3 years, stake plants to keep leaves off soil, avoid overhead watering, and never handle plants when wet."
+  },
+  "Tomato___Early_blight": {
+    "crop": "Tomato",
+    "disease": "Early Blight",
+    "healthy": false,
+    "pathogen": "Alternaria solani / Alternaria linariae (fungus)",
+    "symptoms": "Brown spots with concentric rings forming a target pattern on lower leaves, each with a yellow halo; leaves yellow and drop upward through the plant. Dark sunken lesions can form at the fruit stem end.",
+    "organic": "Neem oil spray every 7-10 days from first symptoms. Copper fungicide also works. Mulch heavily and strip the lowest leaves to break soil-splash spread.",
+    "chemical": "Chlorothalonil or mancozeb on a 7-10 day protectant schedule; azoxystrobin or difenoconazole under heavy pressure.",
+    "prevention": "Rotate crops for two years, stake and prune for airflow, mulch to stop soil splash, water at the base, and remove debris at season end."
+  },
+  "Tomato___Late_blight": {
+    "crop": "Tomato",
+    "disease": "Late Blight",
+    "healthy": false,
+    "pathogen": "Phytophthora infestans (oomycete)",
+    "symptoms": "Large greasy grey-green to brown blotches, often starting at leaf tips and margins, with white downy growth underneath in humid weather. Firm brown greasy patches appear on fruit. Spreads devastatingly fast in cool wet conditions.",
+    "organic": "Remove and destroy affected plants at once - do not compost them. Copper fungicide every 5-7 days protects remaining plants but cannot cure infected tissue.",
+    "chemical": "Mancozeb or chlorothalonil preventively; metalaxyl, cymoxanil or dimethomorph curatively, rotating modes of action.",
+    "prevention": "Space widely for airflow, water at the base only, avoid working among wet plants, destroy volunteers and cull piles, and spray preventively when cool wet weather is forecast."
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomato",
+    "disease": "Leaf Mold",
+    "healthy": false,
+    "pathogen": "Passalora fulva (fungus)",
+    "symptoms": "Pale green to yellow patches on the upper leaf surface with olive-green to greyish-brown velvety mould directly beneath. Leaves wither and die but usually stay attached. Chiefly a greenhouse and high-humidity problem.",
+    "organic": "Cut humidity first: ventilate, space plants, remove lower leaves. Then apply copper fungicide. Remove and destroy infected leaves.",
+    "chemical": "Chlorothalonil, mancozeb or difenoconazole; rotate groups and keep foliage dry.",
+    "prevention": "Keep relative humidity below 85% with ventilation and heating, avoid overhead watering, space plants generously, and grow resistant cultivars in greenhouses."
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "crop": "Tomato",
+    "disease": "Septoria Leaf Spot",
+    "healthy": false,
+    "pathogen": "Septoria lycopersici (fungus)",
+    "symptoms": "Many small circular spots with dark brown margins and grey-tan centres speckled with tiny black fruiting bodies. Starts on the oldest leaves after fruit set and defoliates upward.",
+    "organic": "Remove infected lower leaves promptly, mulch to block soil splash, and apply copper fungicide every 7-10 days.",
+    "chemical": "Chlorothalonil or mancozeb on a protectant schedule starting at first symptoms.",
+    "prevention": "Two-year rotation, thorough removal of crop debris, staking and mulching, drip irrigation, and avoiding overhead water."
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "crop": "Tomato",
+    "disease": "Two-Spotted Spider Mite",
+    "healthy": false,
+    "pathogen": "Tetranychus urticae (mite - a pest, not a pathogen)",
+    "symptoms": "Fine pale stippling on leaves that turns bronze or yellow; delicate webbing on the undersides and between stems. Tiny moving specks visible with a hand lens. Thrives in hot, dusty, dry conditions.",
+    "organic": "Spray the leaf undersides forcefully with water, then apply insecticidal soap, horticultural oil or neem at 5-7 day intervals. Release predatory mites (Phytoseiulus persimilis).",
+    "chemical": "A true miticide such as abamectin, bifenazate or spiromesifen. Avoid broad-spectrum insecticides - they kill the predators and make mite outbreaks worse.",
+    "prevention": "Keep plants well watered and avoid drought stress, suppress dust on nearby paths, preserve natural predators, and inspect leaf undersides weekly in hot weather."
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomato",
+    "disease": "Target Spot",
+    "healthy": false,
+    "pathogen": "Corynespora cassiicola (fungus)",
+    "symptoms": "Small brown spots that enlarge into lesions with light centres and concentric rings, on leaves, stems and fruit. Fruit lesions are sunken and pitted. Can defoliate severely in warm humid regions.",
+    "organic": "Remove infected leaves and fruit, improve airflow by pruning, and apply copper fungicide every 7-10 days.",
+    "chemical": "Chlorothalonil, mancozeb or azoxystrobin; rotate modes of action.",
+    "prevention": "Rotate crops, stake and prune for ventilation, avoid overhead irrigation, and clear all crop debris after harvest."
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomato",
+    "disease": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+    "healthy": false,
+    "pathogen": "Begomovirus, transmitted by the silverleaf whitefly",
+    "symptoms": "Severe upward leaf curling and cupping, yellowing of leaf margins, marked stunting and bushy growth, and heavy flower drop so little or no fruit sets. Young infected plants may never yield.",
+    "organic": "No cure - the plant stays infected for life. Remove and bag infected plants immediately to protect the rest. Control whiteflies with yellow sticky traps, reflective mulch, neem oil and fine insect netting.",
+    "chemical": "Target the whitefly vector: imidacloprid or dinotefuran soil application at transplant, pyriproxyfen or spiromesifen foliar sprays. No chemical treats the virus itself.",
+    "prevention": "Plant TYLCV-resistant varieties, raise seedlings under insect-proof netting, use reflective mulch to repel whiteflies, remove infected plants and weed hosts promptly, and observe a host-free period between crops."
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "crop": "Tomato",
+    "disease": "Tomato Mosaic Virus (ToMV)",
+    "healthy": false,
+    "pathogen": "Tobamovirus (Tomato mosaic virus)",
+    "symptoms": "Light and dark green mottling of leaves, often with fern-like narrowing or distortion of leaflets; mild stunting and uneven, internally browned fruit. Symptoms intensify in low light.",
+    "organic": "No cure. Pull and destroy infected plants. The virus is extremely stable and spreads on hands, tools and clothing, so wash hands with soap and disinfect tools and stakes between plants.",
+    "chemical": "No chemical controls a plant virus. Focus on sanitation and resistant varieties.",
+    "prevention": "Use certified virus-free seed and resistant cultivars, disinfect tools and stakes between plants, avoid tobacco use around the crop, and never save seed from infected plants."
+  },
+  "Tomato___healthy": {
+    "crop": "Tomato",
+    "disease": "Healthy",
+    "healthy": true,
+    "pathogen": null,
+    "symptoms": "No disease symptoms detected. Leaves are uniformly green with normal shape and no lesions.",
+    "organic": "No treatment needed.",
+    "chemical": "No treatment needed.",
+    "prevention": "Keep up the basics: crop rotation, staking and pruning for airflow, mulching, watering at the base in the morning, and weekly scouting of lower leaves."
+  }
+}

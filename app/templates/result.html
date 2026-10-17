@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}{{ result.display }} &middot; Plant Disease Detection{% endblock %}
+{% block content %}
+
+<a class="back" href="{{ url_for('index') }}">&larr; Diagnose another leaf</a>
+
+<section class="result-grid">
+  <figure class="shot">
+    <img src="{{ url_for('static', filename='uploads/' ~ image_name) }}"
+         alt="The leaf photo you submitted">
+    <figcaption class="muted small">{{ image_name }} &middot;
+      analysed in {{ '%.0f'|format(elapsed_ms) }} ms</figcaption>
+  </figure>
+
+  <div class="verdict">
+    <span class="status {{ 'status-good' if result.healthy else 'status-bad' }}">
+      <span aria-hidden="true">{{ '&#10003;'|safe if result.healthy else '&#9888;'|safe }}</span>
+      {{ 'Healthy' if result.healthy else 'Disease detected' }}
+    </span>
+
+    <h1>{{ result.remedy.disease }}</h1>
+    <p class="crop">{{ result.remedy.crop }}</p>
+
+    <div class="confidence">
+      <div class="confidence-head">
+        <span>Confidence</span>
+        <strong>{{ '%.1f'|format(result.confidence * 100) }}%</strong>
+      </div>
+      <div class="meter" role="img"
+           aria-label="Confidence {{ '%.1f'|format(result.confidence * 100) }} percent">
+        <span style="width: {{ '%.1f'|format(result.confidence * 100) }}%"></span>
+      </div>
+    </div>
+
+    {% if result.remedy.pathogen %}
+    <p class="pathogen"><span class="muted">Cause:</span> {{ result.remedy.pathogen }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% if result.low_confidence %}
+<div class="alert alert-warn" role="alert">
+  <strong>Low confidence &mdash; treat this as a suggestion, not a diagnosis.</strong>
+  The model is below {{ threshold }}% sure. Its known failure modes are poor lighting
+  and leaves partly hidden by other plant parts. Retake the photo with one leaf
+  filling the frame in even daylight, and compare against the alternatives below.
+</div>
+{% endif %}
+
+<section class="card">
+  <h2>What the model considered</h2>
+  <table class="topk">
+    <thead>
+      <tr><th scope="col">Class</th><th scope="col">Confidence</th><th scope="col"></th></tr>
+    </thead>
+    <tbody>
+      {% for p in result.predictions %}
+      <tr class="{{ 'is-top' if loop.first }}">
+        <td>{{ p.display }}</td>
+        <td class="num">{{ '%.2f'|format(p.confidence * 100) }}%</td>
+        <td class="bar-cell">
+          <div class="meter meter-sm">
+            <span style="width: {{ '%.1f'|format(p.confidence * 100) }}%"></span>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Symptoms</h2>
+  <p>{{ result.remedy.symptoms }}</p>
+</section>
+
+{% if not result.healthy %}
+<section class="remedies">
+  <article class="card remedy remedy-organic">
+    <h2><span aria-hidden="true">&#127811;</span> Organic treatment</h2>
+    <p>{{ result.remedy.organic }}</p>
+  </article>
+  <article class="card remedy remedy-chemical">
+    <h2><span aria-hidden="true">&#129514;</span> Chemical treatment</h2>
+    <p>{{ result.remedy.chemical }}</p>
+  </article>
+</section>
+{% endif %}
+
+<section class="card">
+  <h2><span aria-hidden="true">&#128737;</span> Prevention</h2>
+  <p>{{ result.remedy.prevention }}</p>
+</section>
+
+{% if not result.remedy.known %}
+<div class="alert alert-warn">
+  No remedy record matched this class name, so generic guidance is shown.
+</div>
+{% endif %}
+
+{% endblock %}

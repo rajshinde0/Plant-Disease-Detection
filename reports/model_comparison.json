@@ -1,0 +1,76 @@
+{
+  "device": "cpu",
+  "args": {
+    "img_size": 64,
+    "batch_size": 32,
+    "epochs": 2,
+    "subset": 0.1,
+    "max_lr": 0.01,
+    "amp": false,
+    "num_workers": null
+  },
+  "results": [
+    {
+      "model": "resnet6",
+      "parameters": 677158,
+      "val_acc": 0.7743468880653381,
+      "val_loss": 0.8133090138435364,
+      "train_seconds": 479.32563948631287,
+      "inference_ms": 9.876529375712076,
+      "epochs": 2,
+      "img_size": 64,
+      "subset": 0.1,
+      "history": [
+        {
+          "val_loss": 2.6123523712158203,
+          "val_acc": 0.28724369406700134,
+          "train_loss": 2.748502492904663,
+          "lr": 0.008117456539497631,
+          "max_lr_seen": 0.01,
+          "secs": 238.44658994674683,
+          "epoch": 1
+        },
+        {
+          "val_loss": 0.8133090138435364,
+          "val_acc": 0.7743468880653381,
+          "train_loss": 1.2971535921096802,
+          "lr": 4e-08,
+          "max_lr_seen": 0.008077421911135444,
+          "secs": 240.87397384643555,
+          "epoch": 2
+        }
+      ]
+    },
+    {
+      "model": "resnet9",
+      "parameters": 6589734,
+      "val_acc": 0.7527281641960144,
+      "val_loss": 0.7869810461997986,
+      "train_seconds": 487.7382380962372,
+      "inference_ms": 15.165289243062338,
+      "epochs": 2,
+      "img_size": 64,
+      "subset": 0.1,
+      "history": [
+        {
+          "val_loss": 4.100020408630371,
+          "val_acc": 0.16054894030094147,
+          "train_loss": 2.9221432209014893,
+          "lr": 0.008117456539497631,
+          "max_lr_seen": 0.01,
+          "secs": 250.94425296783447,
+          "epoch": 1
+        },
+        {
+          "val_loss": 0.7869810461997986,
+          "val_acc": 0.7527281641960144,
+          "train_loss": 1.287463665008545,
+          "lr": 4e-08,
+          "max_lr_seen": 0.008077421911135444,
+          "secs": 236.7866985797882,
+          "epoch": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "history": [
+    {
+      "val_loss": 1.6097708940505981,
+      "val_acc": 0.5758333206176758,
+      "train_loss": 0.997372031211853,
+      "lr": 0.009944154354509118,
+      "max_lr_seen": 0.009999999454182134,
+      "secs": 9356.179888248444,
+      "epoch": 1
+    },
+    {
+      "val_loss": 0.3875828981399536,
+      "val_acc": 0.8772538304328918,
+      "train_loss": 0.3753167688846588,
+      "lr": 0.00462637102666975,
+      "max_lr_seen": 0.009943645775899604,
+      "secs": 7802.2048535346985,
+      "epoch": 2
+    },
+    {
+      "val_loss": 0.05052587017416954,
+      "val_acc": 0.9836363792419434,
+      "train_loss": 0.12254440784454346,
+      "lr": 4e-08,
+      "max_lr_seen": 0.0046229760124520645,
+      "secs": 7934.4826419353485,
+      "epoch": 3
+    }
+  ],
+  "train_seconds": 25093.14566898346,
+  "args": {
+    "model": "resnet9",
+    "img_size": 128,
+    "batch_size": 32,
+    "epochs": 3,
+    "max_lr": 0.01,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "subset": 1.0,
+    "no_augment": false,
+    "num_workers": null,
+    "amp": false,
+    "out": "C:\\Users\\User\\Desktop\\VIT\\FY\\Sem 1\\Applied Science & Engineering Projects(ASEP)\\models\\plant_disease_resnet9.pth",
+    "seed": 42
+  }
+}

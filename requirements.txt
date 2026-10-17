@@ -1,0 +1,23 @@
+# Core (already present on the dev laptop; pinned loosely for portability)
+torch>=2.2
+torchvision>=0.17
+numpy>=1.26
+pillow>=10.0
+tqdm>=4.66
+
+# Evaluation + figures
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+pandas>=2.0
+
+# Web app
+flask>=3.0
+
+# Tests
+pytest>=8.0
+
+# NOTE: on a machine with an NVIDIA GPU, install the CUDA build of torch
+# FIRST, otherwise pip gives you the CPU wheel which silently ignores the GPU:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# Run `python scripts/check_env.py` to confirm CUDA is visible.

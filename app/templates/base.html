@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Plant Disease Detection{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('index') }}">
+      <span class="leaf" aria-hidden="true">&#127807;</span>
+      <span>
+        <strong>Plant Disease Detection</strong>
+        <em>ResNet9 &middot; 38 classes &middot; works offline</em>
+      </span>
+    </a>
+    {% if info and info.get('val_acc') is not none %}
+    <div class="badges">
+      <span class="badge">{{ info.get('model', 'resnet9')|upper }}</span>
+      <span class="badge">{{ info.get('img_size') }}px</span>
+      <span class="badge badge-accent">{{ '%.1f'|format(info['val_acc'] * 100) }}% val acc</span>
+    </div>
+    {% endif %}
+  </header>
+
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="foot">
+    <p>Applied Science &amp; Engineering Project (ASEP) &middot; Vishwakarma Institute of Technology, Pune</p>
+    {% if meta and meta.get('disclaimer') %}
+    <p class="disclaimer">{{ meta['disclaimer'] }}</p>
+    {% endif %}
+  </footer>
+</body>
+</html>

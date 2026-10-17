@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if error %}
+<div class="alert alert-error" role="alert">
+  <strong>Could not process that image.</strong> {{ error }}
+</div>
+{% endif %}
+
+<section class="hero">
+  <h1>Identify a crop disease from a leaf photo</h1>
+  <p class="lede">Upload a photo of a single leaf. The model classifies it into one of
+     38 plant-disease classes across 14 crops and returns a treatment plan from a
+     local remedy database &mdash; no internet connection required.</p>
+</section>
+
+<section class="card">
+  <form id="form" method="post" action="{{ url_for('predict') }}"
+        enctype="multipart/form-data">
+    <label id="drop" for="file" class="drop">
+      <input id="file" type="file" name="image"
+             accept=".jpg,.jpeg,.png,.bmp,.webp" hidden>
+      <img id="preview" alt="" hidden>
+      <div id="dropText" class="drop-text">
+        <span class="drop-icon" aria-hidden="true">&#128247;</span>
+        <strong>Choose a leaf photo</strong>
+        <span class="muted">or drag and drop it here</span>
+        <span class="muted small">JPG, PNG, BMP or WEBP &middot; up to 10&nbsp;MB</span>
+      </div>
+    </label>
+    <div class="actions">
+      <button id="submit" type="submit" class="btn btn-primary" disabled>
+        Diagnose leaf
+      </button>
+      <button id="reset" type="button" class="btn btn-ghost" hidden>Clear</button>
+    </div>
+  </form>
+</section>
+
+{% if samples %}
+<section class="card">
+  <h2>No photo handy? Try a bundled test image</h2>
+  <p class="muted">These come from the dataset's 33 held-out evaluation images &mdash;
+     the model never saw them during training.</p>
+  <div class="samples">
+    {% for s in samples %}
+    <form method="post" action="{{ url_for('predict') }}">
+      <input type="hidden" name="sample" value="{{ s }}">
+      <button class="chip" type="submit">{{ s }}</button>
+    </form>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="card tips">
+  <h2>Getting a reliable result</h2>
+  <ul>
+    <li><strong>One leaf, filling the frame.</strong> Several leaves at once splits the
+        model's attention.</li>
+    <li><strong>Even daylight.</strong> The model's known weak point is low light, and
+        it will warn you when confidence drops.</li>
+    <li><strong>Plain background.</strong> Soil and other plant parts occluding the leaf
+        cause most misclassifications.</li>
+    <li><strong>Focus on the symptoms.</strong> Centre the spots, mould or discolouration.</li>
+  </ul>
+</section>
+
+<script>
+  const fileInput = document.getElementById('file');
+  const drop = document.getElementById('drop');
+  const preview = document.getElementById('preview');
+  const dropText = document.getElementById('dropText');
+  const submit = document.getElementById('submit');
+  const resetBtn = document.getElementById('reset');
+
+  function showFile(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      preview.src = e.target.result;
+      preview.hidden = false;
+      dropText.hidden = true;
+      submit.disabled = false;
+      resetBtn.hidden = false;
+      drop.classList.add('has-image');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  fileInput.addEventListener('change', () => showFile(fileInput.files[0]));
+
+  ['dragenter', 'dragover'].forEach(ev =>
+    drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev =>
+    drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+
+  drop.addEventListener('drop', e => {
+    const file = e.dataTransfer.files[0];
+    if (file) { fileInput.files = e.dataTransfer.files; showFile(file); }
+  });
+
+  resetBtn.addEventListener('click', () => {
+    fileInput.value = '';
+    preview.hidden = true;
+    preview.removeAttribute('src');
+    dropText.hidden = false;
+    submit.disabled = true;
+    resetBtn.hidden = true;
+    drop.classList.remove('has-image');
+  });
+
+  document.getElementById('form').addEventListener('submit', () => {
+    submit.disabled = true;
+    submit.textContent = 'Analysing\u2026';
+  });
+</script>
+{% endblock %}
